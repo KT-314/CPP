@@ -3,7 +3,7 @@ CPPFLAGS = -I include
 prog: main.o
 	g++ $^ -o $@
 
-main.o: main.cpp
+main.o: main.cpp prog.h
 	g++ $(CPPFLAGS) -c $<
 
 run: prog
