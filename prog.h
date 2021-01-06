@@ -3,4 +3,10 @@
 
 #include <iostream>
 
+/* 
+    start.cpp
+*/
+
+void start();
+
 #endif
