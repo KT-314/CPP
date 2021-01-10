@@ -2,10 +2,10 @@
 #define PROG_H
 
 #include <iostream>
+#include "menu.h"
+#include "learm.h"
 
-/* 
-    start.cpp
-*/
+/*   start.cpp    */
 
 void start();
 
