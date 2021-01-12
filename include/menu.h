@@ -1,10 +1,7 @@
 #ifndef MENU_H
 #define MENU_H
 
-#include <iostream>
-#include <string>
-#include <fstream>
-#include <sstream>
+#include "prog.h"
 
 class menu {
 
@@ -160,17 +157,17 @@ inline bool menu::confirm_retry() const {
 
     if (retry == 1) {
 
-        std::cout << " Yes ... 1 / 表示 " << "\n\n";
+        std::cout << "起動" << "\n\n";
         return static_cast<bool>(retry);
     }
     if (retry == 0) {
 
-        std::cout << " No ...  0 / 終了 " << "\n\n";
+        std::cout << "終了" << "\n\n";
         return static_cast<bool>(retry);
     }
     else {
 
-      std::cout << "入力が不正です" << '\n';
+      std::cout << "入力が不正です。" << '\n';
       std::exit(1);
     }
 }

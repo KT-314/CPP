@@ -5,19 +5,19 @@ bool confirm_retry() {
 
     int retry;
 
-    std::cout << "\"learm\"  起動選択の確認... 起動しますか？\n" 
-              << '\n' << " する... 1 / しない... 0 : ";
+    std::cout << "\"start_menu.\" 表示の確認。\n" 
+              << '\n' << " 表示する... 1 / 表示しない... 0 : ";
 
     std::cin >> retry;
 
     if (retry == 1) {
 
-        std::cout << "learm 起動" << "\n\n";
+        std::cout << "表示" << "\n\n";
         return static_cast<bool>(retry);
     }
     if (retry == 0) {
 
-        std::cout << "learm 終了" << "\n\n";
+        std::cout << "終了" << "\n\n";
         return static_cast<bool>(retry);
     }
     else {
@@ -30,10 +30,11 @@ bool confirm_retry() {
 //  セレクト  メニュー
 void select_menu() {
 
-   std::cout << "\"learm\"   起動選択してください。" << "\n\n";
-   std::cout << " learm  C++ introduction  menu ...  0" << '\n';
+   std::cout << "\"start_menu.\" 起動選択してください。" << "\n\n";
+   std::cout << " learm.  C++ introduction  menu ...  0" << '\n';
+   std::cout << " learm1.     operator           ...  1" << '\n';
    std::cout << '\n';
-   std::cout << " exit                          ... 99" << '\n';
+   std::cout << " exit.                          ... 99" << '\n';
 }
 
 void start() {
@@ -41,6 +42,7 @@ void start() {
     menu* menu_obj[] = {
 
         new learm(),
+        new learm1(),
     };
 
     do {
@@ -53,6 +55,7 @@ void start() {
       switch (select) {
 
           case  0: menu_obj[0]->select_start();              break;
+          case  1: menu_obj[1]->select_start();              break;
           case 99: std::cout << " exit " << '\n'; goto Exit; break;
           default: break;
        }

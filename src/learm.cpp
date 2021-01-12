@@ -1,5 +1,4 @@
-#include "menu.h"
-#include "learm.h"
+#include "prog.h"
 
 learm::~learm() {
 
@@ -20,12 +19,19 @@ void learm::select_menu() const {
 
     std::cout << '\n';
     std::cout << "      起動選択してください" << "\n\n";
-    std::cout << " 1 --- C++ introduction  menu  ---" << '\n';
-    std::cout << "77 include / learm.h   " << '\n';
-    std::cout << "88 src     / learm.cpp " << '\n';
-    std::cout << "99 表示したいファイルの存在確認" << '\n';
-    std::cout << " 0 exit-learm"  << '\n';
+    std::cout << " 1 表示"              << '\n';
+    std::cout << "77 include/learm.h"   << '\n';
+    std::cout << "88     src/learm.cpp" << '\n';
+    std::cout << "99 ファイルの表示"    << '\n';
+    std::cout << " 0 exit-learm"        << '\n';
 }
+
+const char *key_word[] {
+
+        "例: src/xxx.cpp  or  include/xxx.h",
+        " include/prog.h",
+        " src/HelloWorld.cpp    __ 1.  表示",
+    };
 
 void learm::select_load() const {
 
@@ -34,13 +40,18 @@ void learm::select_load() const {
         int select;
         std::cin >> select;
         lines(60);
+        int num = sizeof(key_word) / sizeof(key_word[0]);
 
         switch (select) {
 
-            case  1:  std::cout << "test ok\n";            break;
+            case  1:  repeat(HelloWorld);                  break;
             case 77:  file_open("include/learm.h");        break;
             case 88:  file_open("src/learm.cpp");          break;
-            case 99:  file_exist_open();                   break;
+            case 99:
+                      for (int i = 0; i < num; i++) {
+                          std::cout << key_word[i]  << '\n';
+                      }
+                      file_exist_open();                   break;
             case  0:  std::cout << " exit-learm " << '\n'; break;
             default:  break;
         }
