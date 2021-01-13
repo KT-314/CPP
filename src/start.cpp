@@ -5,7 +5,7 @@ bool confirm_retry() {
 
     int retry;
 
-    std::cout << "\"start_menu.\" 表示の確認。\n" 
+    std::cout << "\"Start Menu.\" 表示の確認。\n" 
               << '\n' << " 表示する... 1 / 表示しない... 0 : ";
 
     std::cin >> retry;
@@ -22,7 +22,7 @@ bool confirm_retry() {
     }
     else {
 
-       std::cout << "入力が不正です" << '\n';
+       std::cout << "入力が不正です。" << '\n';
        std::exit(1);
     }
 }
@@ -30,11 +30,10 @@ bool confirm_retry() {
 //  セレクト  メニュー
 void select_menu() {
 
-   std::cout << "\"start_menu.\" 起動選択してください。" << "\n\n";
-   std::cout << " learm.  C++ introduction  menu ...  0" << '\n';
-   std::cout << " learm1.     operator           ...  1" << '\n';
-   std::cout << '\n';
-   std::cout << " exit.                          ... 99" << '\n';
+   std::cout << "\"Start Menu.\" 起動選択してください。" << "\n\n";
+   std::cout << " Learm   C++ Introduction.      ...  0" << '\n';
+   std::cout << " Learm1      Operators.         ...  1" << '\n';
+   std::cout << " Exit.                          ... 99" << '\n';
 }
 
 void start() {
@@ -48,7 +47,7 @@ void start() {
     do {
       select_menu();
       int select;
-      std::cout << '\n' << "番号を 入力して下さい : ";
+      std::cout << '\n' << "番号を 入力して下さい。: ";
       std::cin >> select;
       std::cout << '\n' << select << " を実行します。" << '\n';
 
@@ -63,7 +62,7 @@ void start() {
 
 Exit:
 
-    for (int i = 0; i < sizeof(menu_obj) / sizeof(menu_obj[0]); i++) {
+    for (size_t i = 0; i < sizeof(menu_obj) / sizeof(menu_obj[0]); i++) {
 
         delete menu_obj[i];
     }

@@ -1,23 +1,25 @@
 VPATH = src include
-CPPFLAGS = -I include
+GCC_OPTIONS =-std=c++17 -Wall --pedantic-errors -I include
 
 vpath %.cpp src
 vpath %.h include
 
 prog: main.o start.o \
       learm.o HelloWorld.o \
-      learm1.o
+      learm1.o Operator1.o
 	g++ $^ -o $@
 main.o: main.cpp prog.h
-	g++ $(CPPFLAGS) -c $<
+	g++ $(GCC_OPTIONS) -c $<
 start.o: start.cpp prog.h
-	g++ $(CPPFLAGS) -c $<
+	g++ $(GCC_OPTIONS) -c $<
 learm.o: learm.cpp prog.h
-	g++ $(CPPFLAGS) -c $<
+	g++ $(GCC_OPTIONS) -c $<
 learm1.o: learm1.cpp prog.h
-	g++ $(CPPFLAGS) -c $<
+	g++ $(GCC_OPTIONS) -c $<
 HelloWorld.o: learm/HelloWorld.cpp prog.h
-	g++ $(CPPFLAGS) -c $<
+	g++ $(GCC_OPTIONS) -c $<
+Operator1.o: learm1/Operator1.cpp prog.h
+	g++ $(GCC_OPTIONS) -c $<
 
 run: prog
 	./prog

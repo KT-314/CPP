@@ -17,10 +17,9 @@ std::string learm1::to_string() const {
 
 void learm1::select_menu() const {
 
-    std::cout << '\n';
-    std::cout << "      起動選択してください" << "\n\n";
-    std::cout << "--- C++ operator            ---" << '\n';
-    std::cout << " 1  operator-test              " << '\n';
+    std::cout << "        起動選択してください。" << "\n\n";
+    std::cout << "---        C++ Operators.        ---" << '\n';
+    std::cout << " 1  Operator1 （n)進数　2, 8, 10, 16" << '\n';
     std::cout << "77  include/learm1.h" << '\n';
     std::cout << "88      src/learm1.cpp" << '\n';
     std::cout << "99  ファイルの表示" << '\n';
@@ -37,7 +36,7 @@ void learm1::select_load() const {
 
         switch (select) {
 
-            case  1:  std::cout << "operator-OK" << '\n';   break;
+            case  1:  repeat(Operator1);                    break;
             case 77:  file_open("include/learm1.h");        break;
             case 88:  file_open("src/learm1.cpp");          break;
             case 99:  file_exist_open();                    break;

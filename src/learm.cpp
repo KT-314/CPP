@@ -17,8 +17,8 @@ std::string learm::to_string() const {
 
 void learm::select_menu() const {
 
-    std::cout << '\n';
-    std::cout << "      起動選択してください" << "\n\n";
+    std::cout << "      起動選択してください。" << "\n\n";
+    std::cout << "--- C++ Introduction Menu. ---" << '\n';
     std::cout << " 1 表示"              << '\n';
     std::cout << "77 include/learm.h"   << '\n';
     std::cout << "88     src/learm.cpp" << '\n';
