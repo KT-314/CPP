@@ -11,12 +11,13 @@
 #include "learm.h"
 #include "learm1.h"
 
-void start();      // start.cpp
+void start();
 
 /* learm.cpp */
-void HelloWorld(); // HelloWorld.cpp
+void HelloWorld();
+void HelloWorld1();
 
 /* learm1.cpp */
-void Operator1();  // Operator1.cpp
+void Operator1();
 
 #endif

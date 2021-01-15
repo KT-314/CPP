@@ -16,7 +16,7 @@ void HelloWorld() {
 
     _("1. 表示   標準出力");
     line(0);
-    std::cout << "std::cout << \"Hello World!\"; => ";
+    std::cout << "std::cout << \"Hello World!\"; _> ";
     std::cout << "Hello World!";
     line(0);
 }
