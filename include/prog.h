@@ -19,5 +19,6 @@ void HelloWorld1();
 
 /* learm1.cpp */
 void Operator1();
+void Operator2();
 
 #endif

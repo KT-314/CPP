@@ -17,13 +17,14 @@ std::string learm1::to_string() const {
 
 void learm1::select_menu() const {
 
-    std::cout << "        起動選択してください。" << "\n\n";
-    std::cout << "---        C++ Operators.        ---" << '\n';
-    std::cout << " 1  Operator1  (n)進数　2, 8, 10, 16" << '\n';
-    std::cout << "77  include/learm1.h" << '\n';
-    std::cout << "88      src/learm1.cpp" << '\n';
-    std::cout << "99  ファイルの表示" << '\n';
-    std::cout << " 0  exit-learm1" << '\n';
+    std::cout << "        起動選択してください。\n" << std::endl;
+    std::cout << "---        C++ Operators.        ---" << std::endl;
+    std::cout << " 1  Operator1  (n)進数　2, 8, 10, 16" << std::endl;
+    std::cout << " 2  Operator2  >> 右シフト演算子 (右に1、シフト)" << std::endl;
+    std::cout << "77  include/learm1.h" << std::endl;
+    std::cout << "88      src/learm1.cpp" << std::endl;
+    std::cout << "99  ファイルの表示" << std::endl;
+    std::cout << " 0  exit-learm1" << std::endl;
 }
 
 void learm1::select_load() const {
@@ -33,6 +34,7 @@ void learm1::select_load() const {
         "例: src/xxx.cpp  or  include/xxx.h or include/prog.h or",
         "    src/leram1/xxx.cpp",
         " src/learm1/Operator1.cpp    __ 1. (n)進数　2, 8, 10, 16",
+        " src/learm1/Operator2.cpp    __ 2. >> 右シフト演算子 (右に1、シフト)",
     };
 
     do {
@@ -45,6 +47,7 @@ void learm1::select_load() const {
         switch (select) {
 
             case  1:  repeat(Operator1);                    break;
+            case  2:  repeat(Operator2);                    break;
             case 77:  file_open("include/learm1.h");        break;
             case 88:  file_open("src/learm1.cpp");          break;
             case 99:
