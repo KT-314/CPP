@@ -16,6 +16,7 @@ void start();
 /* learm.cpp */
 void HelloWorld();
 void HelloWorld1();
+void String();
 
 /* learm1.cpp */
 void Operator1();

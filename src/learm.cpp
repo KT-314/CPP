@@ -18,13 +18,14 @@ std::string learm::to_string() const {
 void learm::select_menu() const {
 
     std::cout << "      起動選択してください。" << "\n\n";
-    std::cout << " --- C++ Introduction Menu. ---" << '\n';
-    std::cout << " 1.  表示--標準出力" << '\n';
-    std::cout << " 2.  改行を出力" << '\n';
-    std::cout << "77.  include/learm.h" << '\n';
-    std::cout << "88.      src/learm.cpp" << '\n';
-    std::cout << "99.  ファイルの表示" << '\n';
-    std::cout << " 0.  exit-learm" << '\n';
+    std::cout << " --- C++ Introduction Menu. ---" << std::endl;
+    std::cout << " 1.  表示--標準出力" << std::endl;
+    std::cout << " 2.  改行を出力" << std::endl;
+    std::cout << " 3.  文字列" << std::endl;
+    std::cout << "77.  include/learm.h" << std::endl;
+    std::cout << "88.      src/learm.cpp" << std::endl;
+    std::cout << "99.  ファイルの表示" << std::endl;
+    std::cout << " 0.  exit-learm" << std::endl;
 }
 
 void learm::select_load() const {
@@ -35,6 +36,7 @@ void learm::select_load() const {
         "    src/leram/xxx.cpp",
         " src/learm/HelloWorld.cpp    __ 1.  表示",
         " src/learm/HelloWorld1.cpp   __ 2.  改行を出力",
+        " src/learm/String.cpp        __ 3.  文字列",
     };
 
     do {
@@ -48,6 +50,7 @@ void learm::select_load() const {
 
             case  1:  repeat(HelloWorld);                  break;
             case  2:  repeat(HelloWorld1);                 break;
+            case  3:  repeat(String);                      break;
             case 77:  file_open("include/learm.h");        break;
             case 88:  file_open("src/learm.cpp");          break;
             case 99:
