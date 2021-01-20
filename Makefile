@@ -5,7 +5,7 @@ vpath %.cpp src
 vpath %.h include
 
 prog: main.o start.o \
-      learm.o HelloWorld.o HelloWorld1.o String.o \
+      learm.o HelloWorld.o HelloWorld1.o String.o IntDouble.o \
       learm1.o Operator1.o Operator2.o
 	g++ $^ -o $@
 prog.h.gch: prog.h
@@ -23,6 +23,8 @@ HelloWorld.o: learm/HelloWorld.cpp prog.h
 HelloWorld1.o: learm/HelloWorld1.cpp prog.h
 	g++ $(GCC_OPTIONS) -c $<
 String.o: learm/String.cpp prog.h
+	g++ $(GCC_OPTIONS) -c $<
+IntDouble.o: learm/IntDouble.cpp prog.h
 	g++ $(GCC_OPTIONS) -c $<
 Operator1.o: learm1/Operator1.cpp prog.h
 	g++ $(GCC_OPTIONS) -c $<
