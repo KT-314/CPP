@@ -18,6 +18,7 @@ void HelloWorld();
 void HelloWorld1();
 void String();
 void IntDouble();
+void Variable();
 
 /* learm1.cpp */
 void Operator1();

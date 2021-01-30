@@ -23,6 +23,7 @@ void learm::select_menu() const {
     std::cout << " 2.  改行を出力" << std::endl;
     std::cout << " 3.  文字列" << std::endl;
     std::cout << " 4.  整数と浮動小数点数" << std::endl;
+    std::cout << " 5.  変数" << std::endl;
     std::cout << "77.  include/learm.h" << std::endl;
     std::cout << "88.      src/learm.cpp" << std::endl;
     std::cout << "99.  ファイルの表示" << std::endl;
@@ -39,6 +40,7 @@ void learm::select_load() const {
         " src/learm/HelloWorld1.cpp   __ 2.  改行を出力",
         " src/learm/String.cpp        __ 3.  文字列",
         " src/learm/IntDouble.cpp     __ 4.  整数と浮動小数点数",
+        " src/learm/Variable.cpp      __ 5.  変数",
     };
 
     do {
@@ -54,6 +56,7 @@ void learm::select_load() const {
             case  2:  repeat(HelloWorld1);                 break;
             case  3:  repeat(String);                      break;
             case  4:  repeat(IntDouble);                   break;
+            case  5:  repeat(Variable);                    break;
             case 77:  file_open("include/learm.h");        break;
             case 88:  file_open("src/learm.cpp");          break;
             case 99:
