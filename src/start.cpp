@@ -33,6 +33,7 @@ void select_menu() {
    std::cout << "\"Start Menu.\" 起動選択してください。" << "\n\n";
    std::cout << " Learm   C++ Introduction.      ...  0" << '\n';
    std::cout << " Learm1      Operators.         ...  1" << '\n';
+   std::cout << " Learm2      Container.         ...  2" << '\n';
    std::cout << " Exit.                          ... 99" << '\n';
 }
 
@@ -42,6 +43,7 @@ void start() {
 
         new learm(),
         new learm1(),
+        new learm2(),
     };
 
     do {
@@ -55,6 +57,7 @@ void start() {
 
           case  0: menu_obj[0]->select_start();              break;
           case  1: menu_obj[1]->select_start();              break;
+          case  2: menu_obj[2]->select_start();              break;
           case 99: std::cout << " exit " << '\n'; goto Exit; break;
           default: break;
        }
